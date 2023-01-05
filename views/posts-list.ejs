@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/head', { title: 'All Posts' }) %>
+  <link rel="stylesheet" href="/styles/posts.css">
+</head>
+
+<body>
+  <%- include('includes/header') %>
+  <main id="all-posts">
+    <h1>All Posts</h1>
+      <% if(!posts || posts.length === 0) { %>
+        <h2>There is No Available Post at the moment</h2>
+        <a href="/new-post">Maybe you can make one !!!</a>
+      <% }%> 
+
+     <ol id="posts-list">
+       <% for(let post of posts) { %>
+         <%- include('includes/post-item',{post:post}) %> 
+       <% }%>
+     </ol>
+  </main> 
+</body>
+
+</html>
