@@ -10,29 +10,32 @@ MySQL
 Installation
 To install the dependencies for this application, run the following command from the root directory of the project:
 
-Copy code
 npm install
+
 Setting up the database
 Start the MySQL server by running the following command:
-Copy code
+
 mysql.server start
+
 Create a new database by running the following command:
-Copy code
+
 mysql -u root -p
+
 Enter the password for the root user.
 
 Once you are in the MySQL command line, create a new database by running the following command:
 
-Copy code
 CREATE DATABASE full_stack;
+
 Exit the MySQL command line by running the following command:
-Copy code
+
 exit
+
 Running the application
 To start the application, run the following command from the root directory of the project:
 
-Copy code
-npm start
+
+npm start app.js
 The application will be running at http://localhost:3000/.
 
 Built With
